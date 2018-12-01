@@ -3,11 +3,10 @@ package adventureSOLID;
 import adventureSOLID.DAO.allycomanderDAOImpl;
 import adventureSOLID.DAO.allysoldierDAOImpl;
 import adventureSOLID.DAO.enemycomanderDAOImpl;
+import adventureSOLID.DAO.enemysoldierDAOImpl;
 import adventureSOLID.allysAndenemys.Comander;
 import adventureSOLID.allysAndenemys.Players;
 import adventureSOLID.allysAndenemys.Soldier;
-import solid.dao.GenericDao;
-import solid.players.Player;
 
 /**
  * Created by Maria on 01.12.2018.
@@ -27,10 +26,10 @@ public class Main {
         Players comander2 = new Comander();
         System.out.println("Enemy Comander Nickname - " + comander2.nickName);
         //test allyComander functionlity
-        enemycomanderDAOImpl allycomanderDAO2 = new enemycomanderDAOImpl();
-        System.out.println(allycomanderDAO2.SendOrders());
-        System.out.println(allycomanderDAO2.promoteSubordinate());
-        System.out.println(allycomanderDAO2.attack());
+        enemycomanderDAOImpl enemycomanderDAO = new enemycomanderDAOImpl();
+        System.out.println(enemycomanderDAO.SendOrders());
+        System.out.println(enemycomanderDAO.promoteSubordinate());
+        System.out.println(enemycomanderDAO.attack());
 
         //ally soldier functionality
         Soldier soldier1 = new Soldier();
@@ -42,11 +41,10 @@ public class Main {
 
         //enemy soldier functionality
         Soldier soldier2 = new Soldier();
-        System.out.println("Enemy Soldier Nickname - " + soldier1.nickName);
-        allysoldierDAOImpl allysoldierDAOImpl2 = new allysoldierDAOImpl();
-        System.out.println(allysoldierDAOImpl2.walk());
-        System.out.println(allysoldierDAOImpl2.protect());
-        System.out.println(allysoldierDAOImpl2.attack());
+        System.out.println("Enemy Soldier Nickname - " + soldier2.nickName);
+        enemysoldierDAOImpl enemysoldierDAOImpl2 = new enemysoldierDAOImpl();
+        System.out.println(enemysoldierDAOImpl2.walk());
+        System.out.println(enemysoldierDAOImpl2.attack());
 
 
     }
