@@ -1,12 +1,7 @@
 package adventureSOLID;
 
-import adventureSOLID.DAO.allycomanderDAOImpl;
-import adventureSOLID.DAO.allysoldierDAOImpl;
-import adventureSOLID.DAO.enemycomanderDAOImpl;
-import adventureSOLID.DAO.enemysoldierDAOImpl;
-import adventureSOLID.allysAndenemys.Comander;
-import adventureSOLID.allysAndenemys.Players;
-import adventureSOLID.allysAndenemys.Soldier;
+import adventureSOLID.DAO.*;
+import adventureSOLID.allysAndenemys.*;
 
 /**
  * Created by Maria on 01.12.2018.
@@ -46,6 +41,35 @@ public class Main {
         System.out.println(enemysoldierDAOImpl2.walk());
         System.out.println(enemysoldierDAOImpl2.attack());
 
+        //ally dragon functionality
+        Dragon dragon1 = new Dragon();
+        System.out.println("Ally Dragon Nickname - " + dragon1.nickName);
+        allydragonDAOImpl allydragonDAO = new allydragonDAOImpl();
+        System.out.println(allydragonDAO.fly());
+        System.out.println(allydragonDAO.attack());
+
+        //enemy dragon functionality
+        Dragon dragon2 = new Dragon();
+        System.out.println("Ally Dragon Nickname - " + dragon2.nickName);
+        enemydragonDAOImpl enemydragonDAO = new enemydragonDAOImpl();
+        System.out.println(enemydragonDAO.fly());
+        System.out.println(enemydragonDAO.attack());
+
+        //ally mage functionality
+        Mage mage = new Mage();
+        System.out.println("Ally Mage Nickname - " + mage.nickName);
+        allymageDAOImpl allymageDAO = new allymageDAOImpl();
+        System.out.println(allymageDAO.castSpell());
+        System.out.println(allymageDAO.fly());
+        System.out.println(allymageDAO.attack());
+
+        // enemy witch functionality
+        Witch witch = new Witch();
+        System.out.println("Enemy Witch Nickname - " + witch.nickName);
+        enemywitchDAOImpl enemywitchDAO = new enemywitchDAOImpl();
+        System.out.println(enemywitchDAO.curse());
+        System.out.println(enemywitchDAO.fly());
+        System.out.println(enemywitchDAO.attack());
 
     }
 }
