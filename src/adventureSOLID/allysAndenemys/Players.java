@@ -1,7 +1,4 @@
 package adventureSOLID.allysAndenemys;
-
-import solid.players.Player;
-
 /**
  * Created by Maria on 01.12.2018.
  */

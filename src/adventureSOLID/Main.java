@@ -2,6 +2,9 @@ package adventureSOLID;
 
 import adventureSOLID.DAO.*;
 import adventureSOLID.allysAndenemys.*;
+import adventureSOLID.dependencyInversion.BackEndGameMaster;
+import adventureSOLID.dependencyInversion.FrontEndGameMaster;
+import adventureSOLID.interfaceSegregation.GameMaster;
 
 /**
  * Created by Maria on 01.12.2018.
@@ -71,5 +74,11 @@ public class Main {
         System.out.println(enemywitchDAO.fly());
         System.out.println(enemywitchDAO.attack());
 
+        //dependency inversion functionality
+        GameMaster gameMaster1 = new BackEndGameMaster();
+        System.out.println(gameMaster1.addnewElements());
+
+        GameMaster gameMaster2 =  new FrontEndGameMaster();
+        System.out.println(gameMaster2.addnewElements());
     }
 }
