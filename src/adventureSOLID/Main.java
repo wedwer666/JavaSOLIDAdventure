@@ -6,6 +6,7 @@ import adventureSOLID.allysAndenemys.*;
 import adventureSOLID.dependencyInversion.BackEndGameMaster;
 import adventureSOLID.dependencyInversion.FrontEndGameMaster;
 import adventureSOLID.interfaceSegregation.GameMaster;
+import adventureSOLID.singletonPaternCreational.Singleton;
 
 /**
  * Created by Maria on 01.12.2018.
@@ -115,5 +116,8 @@ public class Main {
         Bonuses bonuses3 = bonusesFactory.getBonuses("big");
         bonuses3.getBonuses();
 
+        //singleton pattern implementation
+        System.out.println("");
+        Singleton.getInstance().publicMethod();
     }
 }
