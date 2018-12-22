@@ -74,6 +74,20 @@ public class Main {
         System.out.println(enemywitchDAO.fly());
         System.out.println(enemywitchDAO.attack());
 
+        // ally deamon functionality
+        Deamon deamon = new Deamon();
+        System.out.println("Ally Deamon Functionality - " + deamon.nickName);
+        allydeamonDAOImpl allydeamonDAO = new allydeamonDAOImpl();
+        System.out.println(allydeamonDAO.attack());
+        System.out.println(allydeamonDAO.save());
+
+        // enemy deamon functionality
+        Deamon deamon2 = new Deamon();
+        System.out.println("Enemy Deamon Functionality - " + deamon2.nickName);
+        enemydeamonDAOImpl enemydeamonDAO = new enemydeamonDAOImpl();
+        System.out.println(enemydeamonDAO.attack());
+        System.out.println(enemydeamonDAO.freeze());
+
         //dependency inversion functionality
         GameMaster gameMaster1 = new BackEndGameMaster();
         System.out.println(gameMaster1.addnewElements());
