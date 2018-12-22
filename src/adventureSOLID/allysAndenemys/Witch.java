@@ -17,8 +17,8 @@ public class Witch extends Players implements IMagic{
     }
 
     @Override
-    public void add(int value) {
-        
+    public int add(int s) {
+        return 15;
     }
 
     @Override
@@ -30,4 +30,5 @@ public class Witch extends Players implements IMagic{
     public void MagicDamage() {
 
     }
+
 }

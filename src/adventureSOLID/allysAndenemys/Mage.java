@@ -18,8 +18,8 @@ public class Mage extends Players implements IMagic{
     }
 
     @Override
-    public void add(int value) {
-
+    public int add(int s) {
+        return 1;
     }
 
     @Override
@@ -31,4 +31,5 @@ public class Mage extends Players implements IMagic{
     public void MagicDamage() {
 
     }
+
 }

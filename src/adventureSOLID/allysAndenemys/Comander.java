@@ -8,9 +8,13 @@ import adventureSOLID.interfaceSegregation.IHuman;
  */
 public class Comander extends Players implements IHuman{
 
+    public int getRaceBonus() {
+        return 50;
+    }
+
     @Override
     public int getRaceBonus(Players players) {
-        return 50;
+        return 0;
     }
 
     @Override
@@ -19,8 +23,8 @@ public class Comander extends Players implements IHuman{
     }
 
     @Override
-    public void add(int value) {
-
+    public int add(int s) {
+        return 5;
     }
 
     @Override
@@ -32,4 +36,5 @@ public class Comander extends Players implements IHuman{
     public void humanDamage() {
 
     }
+
 }

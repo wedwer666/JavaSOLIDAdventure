@@ -8,12 +8,12 @@ import adventureSOLID.interfaceSegregation.GameMaster;
 public class BackEndGameMaster implements GameMaster {
     public String addLogic(){
         System.out.println("New back end logic");
-        return ("---------------------------------------------------------");
+        return ("");
     }
 
     @Override
     public String addnewElements() {
     System.out.println("Add new elements in logic");
-        return ("---------------------------------------------------------");
+        return ("");
     }
 }

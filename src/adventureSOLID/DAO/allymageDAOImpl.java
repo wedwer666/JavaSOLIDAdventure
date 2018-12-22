@@ -6,18 +6,19 @@ import adventureSOLID.allysAndenemys.Mage;
  * Created by Maria on 02.12.2018.
  */
 public class allymageDAOImpl implements genericDAO<Mage, String> {
+    static final String MAGE_CAST_SPELLING = "Ally Mage is castSpelling ...";
+    static final String MAGE_FLY = "Ally Mage is flying ...";
+    static final String MAGE_ATTACK = "Ally Mage is attacking ...";
 
     public String castSpell()
     {
-        System.out.println("It is cast spell functionality for ally mage");
-        return ("---------------------------------------------------------");
+        return MAGE_CAST_SPELLING;
     }
     public String fly(){
-        System.out.println("It is fly functionality for ally mage");
-        return ("---------------------------------------------------------");
+        return MAGE_FLY;
     }
     @Override
     public String attack() {
-        System.out.println("It is attack functionality for ally mage");
-        return ("---------------------------------------------------------");    }
+        return MAGE_ATTACK;
+    }
 }

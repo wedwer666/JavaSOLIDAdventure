@@ -1,6 +1,7 @@
 package adventureSOLID;
 
 import adventureSOLID.DAO.*;
+import adventureSOLID.abstractFactoryPattern.*;
 import adventureSOLID.allysAndenemys.*;
 import adventureSOLID.dependencyInversion.BackEndGameMaster;
 import adventureSOLID.dependencyInversion.FrontEndGameMaster;
@@ -11,6 +12,8 @@ import adventureSOLID.interfaceSegregation.GameMaster;
  */
 public class Main {
     public static void main(String... args) {
+
+        System.out.println("PLAYERS AND THEIR RESPONSABILITIES:");
         //ally comander functionality
         Players comander1 = new Comander();
         System.out.println("Ally Comander Nickname - " + comander1.nickName);
@@ -94,5 +97,23 @@ public class Main {
 
         GameMaster gameMaster2 =  new FrontEndGameMaster();
         System.out.println(gameMaster2.addnewElements());
+
+        //abstract factory implementation
+        System.out.println("PLAYERS AND MOVEMENTS AND THEIR COST");
+        FighterFactory movementFactory = FactoryProducer.getFactory("movement");
+        FighterFactory bonusesFactory = FactoryProducer.getFactory("bonuses");
+        TypeOfMovements typeOfMovements1 = movementFactory.getMovement("horizontal");
+        typeOfMovements1.move();
+        Bonuses bonuses1 = bonusesFactory.getBonuses("small");
+        bonuses1.getBonuses();
+        TypeOfMovements typeOfMovements2 = movementFactory.getMovement("vertical");
+        typeOfMovements2.move();
+        Bonuses bonuses2 = bonusesFactory.getBonuses("medium");
+        bonuses2.getBonuses();
+        TypeOfMovements typeOfMovements3 = movementFactory.getMovement("diagonal");
+        typeOfMovements3.move();
+        Bonuses bonuses3 = bonusesFactory.getBonuses("big");
+        bonuses3.getBonuses();
+
     }
 }

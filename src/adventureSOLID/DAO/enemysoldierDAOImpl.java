@@ -5,15 +5,17 @@ import adventureSOLID.allysAndenemys.Soldier;
 /**
  * Created by Maria on 01.12.2018.
  */
-public class enemysoldierDAOImpl implements genericDAO<Soldier, String>  {
+public class enemysoldierDAOImpl implements genericDAO<Soldier, String> {
+    static final String SOLDIER_WALK = "Ally Sodier is walking ...";
+    static final String SOLDIER_ATTACK = "Ally Soldier is attacking ...";
 
-    public String walk(){
-        System.out.println("It is walk functionality for enemy soldier");
-        return ("---------------------------------------------------------");
+    public String walk()
+    {
+        return SOLDIER_WALK;
     }
     @Override
-    public String attack() {
-        System.out.println("It is attack functionality for enemy soldier");
-        return ("---------------------------------------------------------");
+    public String attack()
+    {
+        return SOLDIER_ATTACK;
     }
 }

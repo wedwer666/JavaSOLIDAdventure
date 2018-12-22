@@ -9,12 +9,12 @@ public class FrontEndGameMaster implements GameMaster {
 
     public String addDesign(){
         System.out.println("Add new design in game");
-        return ("---------------------------------------------------------");
+        return ("");
     }
 
     @Override
     public String addnewElements() {
         System.out.println("Add new elements in design");
-        return ("---------------------------------------------------------");
+        return ("");
     }
 }

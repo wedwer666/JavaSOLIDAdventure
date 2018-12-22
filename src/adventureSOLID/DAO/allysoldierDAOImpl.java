@@ -8,19 +8,21 @@ import adventureSOLID.allysAndenemys.Soldier;
 
 //allySoldier
 public class allysoldierDAOImpl implements genericDAO<Soldier, String> {
+    static final String SOLDIER_WALK = "Ally Sodier is walking ...";
+    static final String SOLDIER_PROTECT = "Ally Soldier is protecting ...";
+    static final String SOLDIER_ATTACK = "Ally Soldier is attacking ...";
 
     public String walk()
     {
-        System.out.println("It is walk functionality for ally soldier");
-        return ("---------------------------------------------------------");
+       return SOLDIER_WALK;
     }
-    public String protect(){
-        System.out.println("It is protect functionality for ally soldier");
-        return ("---------------------------------------------------------");
+    public String protect()
+    {
+        return SOLDIER_PROTECT;
     }
     @Override
-    public String attack() {
-        System.out.println("It is attack functionality for ally soldier");
-        return ("---------------------------------------------------------");
+    public String attack()
+    {
+       return SOLDIER_ATTACK;
     }
 }

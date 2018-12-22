@@ -6,17 +6,20 @@ import adventureSOLID.allysAndenemys.Witch;
  * Created by Maria on 02.12.2018.
  */
 public class enemywitchDAOImpl implements genericDAO<Witch, String> {
+    static final String WITCH_CURSE = "Enemy Witch is cursing ...";
+    static final String WITCH_FLY = "Enemy Witch is flying...";
+    static final String WITCH_ATTACK = "Enemy Witch is attacking ...";
+
     public String curse()
     {
-        System.out.println("It is curse functionality for enemy witch");
-        return ("---------------------------------------------------------");
+        return WITCH_CURSE;
     }
     public String fly(){
-        System.out.println("It is fly functionality for enemy witch");
-        return ("---------------------------------------------------------");
+        return WITCH_FLY;
     }
     @Override
     public String attack() {
-        System.out.println("It is attack functionality for enemy witch");
-        return ("---------------------------------------------------------");    }
+        return WITCH_ATTACK;
+    }
+
 }

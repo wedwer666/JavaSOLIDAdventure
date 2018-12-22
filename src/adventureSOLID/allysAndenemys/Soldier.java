@@ -17,8 +17,8 @@ public class Soldier extends Players implements IHuman{
     }
 
     @Override
-    public void add(int value) {
-
+    public int add(int s) {
+        return 10;
     }
 
     @Override
@@ -30,4 +30,5 @@ public class Soldier extends Players implements IHuman{
     public void humanDamage() {
 
     }
+
 }

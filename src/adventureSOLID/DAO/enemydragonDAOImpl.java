@@ -6,15 +6,15 @@ import adventureSOLID.allysAndenemys.Dragon;
  * Created by Maria on 02.12.2018.
  */
 public class enemydragonDAOImpl implements genericDAO<Dragon, String> {
+    static final String DRAGON_FLY = "Enemy Dragon is flying ...";
+    static final String DRAGON_ATTACK = "Enemy Dragon is attacking ...";
 
     public String fly()
     {
-        System.out.println("It is fly functionality for enemy dragon");
-        return ("---------------------------------------------------------");
+        return DRAGON_FLY;
     }
     @Override
     public String attack() {
-        System.out.println("It is attack functionality for enemy dragon");
-        return ("---------------------------------------------------------");
+        return DRAGON_ATTACK;
     }
 }

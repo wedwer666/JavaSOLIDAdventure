@@ -7,8 +7,8 @@ import adventureSOLID.interfaceSegregation.IDeamon;
  */
 public class Deamon extends Players implements IDeamon {
     @Override
-    public void add(int value) {
-
+    public int add(int s) {
+      return 10;
     }
 
     @Override
@@ -30,4 +30,6 @@ public class Deamon extends Players implements IDeamon {
     public int raceHit() {
         return 0;
     }
+
+
 }
