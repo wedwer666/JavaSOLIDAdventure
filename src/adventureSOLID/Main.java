@@ -2,6 +2,7 @@ package adventureSOLID;
 
 import adventureSOLID.DAO.*;
 import adventureSOLID.abstractFactoryPattern.*;
+import adventureSOLID.adapterPatternStructural.SimplePlayer;
 import adventureSOLID.allysAndenemys.*;
 import adventureSOLID.dependencyInversion.BackEndGameMaster;
 import adventureSOLID.dependencyInversion.FrontEndGameMaster;
@@ -100,7 +101,7 @@ public class Main {
         System.out.println(gameMaster2.addnewElements());
 
         //abstract factory implementation
-        System.out.println("PLAYERS AND MOVEMENTS AND THEIR COST");
+        System.out.println("PLAYER'S MOVEMENTS AND THEIR COST");
         FighterFactory movementFactory = FactoryProducer.getFactory("movement");
         FighterFactory bonusesFactory = FactoryProducer.getFactory("bonuses");
         TypeOfMovements typeOfMovements1 = movementFactory.getMovement("horizontal");
@@ -119,5 +120,14 @@ public class Main {
         //singleton pattern implementation
         System.out.println("");
         Singleton.getInstance().publicMethod();
+        System.out.println("");
+        //adapter pattern implementation
+        System.out.println("PERSON MUST CHOOSE TYPE OF PLAYER AND NICKNAME");
+        SimplePlayer simplePlayer = new SimplePlayer();
+        simplePlayer.play("invisible", "MisterX");
+        simplePlayer.play("enemy", "ZLO");
+        simplePlayer.play("ally", "SOVESTI");
+        simplePlayer.play("ownperson","Mary");
+
     }
 }
