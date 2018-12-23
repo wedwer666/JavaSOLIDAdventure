@@ -8,6 +8,10 @@ import adventureSOLID.dependencyInversion.BackEndGameMaster;
 import adventureSOLID.dependencyInversion.FrontEndGameMaster;
 import adventureSOLID.interfaceSegregation.GameMaster;
 import adventureSOLID.singletonPaternCreational.Singleton;
+import adventureSOLID.statePatternBehavioral.PlayerContext;
+import adventureSOLID.statePatternBehavioral.StartState;
+import adventureSOLID.statePatternBehavioral.State;
+import adventureSOLID.statePatternBehavioral.StopState;
 
 /**
  * Created by Maria on 01.12.2018.
@@ -118,16 +122,25 @@ public class Main {
         bonuses3.getBonuses();
 
         //singleton pattern implementation
-        System.out.println("");
+        System.out.println("\n");
         Singleton.getInstance().publicMethod();
-        System.out.println("");
+
         //adapter pattern implementation
-        System.out.println("PERSON MUST CHOOSE TYPE OF PLAYER AND NICKNAME");
+        System.out.println("\n" +"PERSON MUST CHOOSE TYPE OF PLAYER AND NICKNAME");
         SimplePlayer simplePlayer = new SimplePlayer();
         simplePlayer.play("invisible", "MisterX");
         simplePlayer.play("enemy", "ZLO");
         simplePlayer.play("ally", "SOVESTI");
         simplePlayer.play("ownperson","Mary");
 
+        //state patern implementation
+        System.out.println("\n" + "PLAYER STATE: ");
+        PlayerContext context = new PlayerContext();
+        State startState = new StartState();
+        State stopState = new StopState();
+        context.setState(startState);
+        context.doAction();
+        context.setState(stopState);
+        context.doAction();
     }
 }
