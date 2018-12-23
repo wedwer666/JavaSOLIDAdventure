@@ -18,7 +18,6 @@ import adventureSOLID.statePatternBehavioral.StopState;
  */
 public class Main {
     public static void main(String... args) {
-
         System.out.println("PLAYERS AND THEIR RESPONSABILITIES:");
         //ally comander functionality
         Players comander1 = new Comander();
